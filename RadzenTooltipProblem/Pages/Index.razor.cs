@@ -8,18 +8,41 @@ namespace RadzenTooltipProblem.Pages
 
         protected override void OnInitialized()
         {
-            ChartData = new List<GenericJobData>();
-
-            var random = new Random();
-
-            for (var i = 0; i < 30; i++)
+            ChartData = new List<GenericJobData>()
             {
-                ChartData.Add(new GenericJobData (DateTime.Now.AddDays(i + random.Next(4)), random.Next(21)));
-            }
+                new GenericJobData(new DateTime(2022, 06, 20), 13),
+                new GenericJobData(new DateTime(2022, 06, 23), 10),
+                new GenericJobData(new DateTime(2022, 06, 24), 23),
+                new GenericJobData(new DateTime(2022, 06, 25), 10),
+                new GenericJobData(new DateTime(2022, 06, 26), 16),
+                new GenericJobData(new DateTime(2022, 06, 27), 0),
+                new GenericJobData(new DateTime(2022, 06, 30), 10),
+                new GenericJobData(new DateTime(2022, 06, 1), 5),
+                new GenericJobData(new DateTime(2022, 07, 3), 7),
+                new GenericJobData(new DateTime(2022, 06, 5), 10),
+                new GenericJobData(new DateTime(2022, 06, 6), 13),
+                new GenericJobData(new DateTime(2022, 06, 7), 19),
+                new GenericJobData(new DateTime(2022, 06, 11), 51),
+                new GenericJobData(new DateTime(2022, 06, 15), 1),
+                new GenericJobData(new DateTime(2022, 06, 16), 13),
+                new GenericJobData(new DateTime(2022, 06, 17), 7),
+                new GenericJobData(new DateTime(2022, 06, 18), 18),
+                new GenericJobData(new DateTime(2022, 06, 19), 16),
+                new GenericJobData(new DateTime(2022, 06, 22), 7),
+            };
 
-            ChartData = ChartData.GroupBy(x => x.Date)
-                        .Select(x => new GenericJobData (x.Key, x.Sum(y => y.Value)))
-                        .ToList();
+            //ChartData = new List<GenericJobData>();
+
+            //var random = new Random();
+
+            //for (var i = 0; i < 30; i++)
+            //{
+            //    ChartData.Add(new GenericJobData (DateTime.Now.Date.AddDays(i + random.Next(4)), random.Next(21)));
+            //}
+
+            //ChartData = ChartData.GroupBy(x => x.Date)
+            //            .Select(x => new GenericJobData (x.Key, x.Sum(y => y.Value)))
+            //            .ToList();
         }
     }
     public class GenericJobData
