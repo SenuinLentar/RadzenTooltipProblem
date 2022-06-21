@@ -8,15 +8,17 @@ Welcome to your new app.
 
 <SurveyPrompt Title="How is Blazor working for you?" />
 
-<RadzenChart>
-    <RadzenLineSeries Title="Example" Smooth="true" Data="@ChartData" CategoryProperty="@nameof(GenericJobData.Date)" ValueProperty="@nameof(GenericJobData.Value)" LineType="LineType.Solid">
-        <RadzenMarkers MarkerType="MarkerType.Circle" />
-    </RadzenLineSeries>
-    <RadzenCategoryAxis Padding="10" FormatString="{0:dd/MM/yy}">
-        <RadzenGridLines Visible="true" />
-    </RadzenCategoryAxis>
-    <RadzenValueAxis>
-        <RadzenGridLines Visible="true" />
-    </RadzenValueAxis>
-    <RadzenLegend Visible="false" />
-</RadzenChart>
+<div class="w-50">
+    <RadzenChart>
+        <RadzenLineSeries Title="Example" Smooth="true" Data="@ChartData" CategoryProperty="@nameof(GenericJobData.Date)" ValueProperty="@nameof(GenericJobData.Value)" LineType="LineType.Solid">
+            <RadzenMarkers MarkerType="MarkerType.Circle" />
+        </RadzenLineSeries>
+        <RadzenCategoryAxis Padding="10" FormatString="{0:dd/MM/yy}">
+            <RadzenGridLines Visible="true" />
+        </RadzenCategoryAxis>
+        <RadzenValueAxis>
+            <RadzenGridLines Visible="true" />
+        </RadzenValueAxis>
+        <RadzenLegend Visible="false" />
+    </RadzenChart>
+</div>
