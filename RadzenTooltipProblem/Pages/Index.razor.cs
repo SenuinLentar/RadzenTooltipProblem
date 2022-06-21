@@ -5,6 +5,7 @@ namespace RadzenTooltipProblem.Pages
     public partial class Index : ComponentBase
     {
         public List<GenericJobData> ChartData { get; set; }
+        public List<GenericJobData> ChartData2 { get; set; }
 
         protected override void OnInitialized()
         {
@@ -14,6 +15,16 @@ namespace RadzenTooltipProblem.Pages
                 new GenericJobData(new DateTime(2022, 06, 15), 89),
                 new GenericJobData(new DateTime(2022, 06, 16), 59),
                 new GenericJobData(new DateTime(2022, 06, 17), 46),
+                new GenericJobData(new DateTime(2022, 06, 20), 67),
+                new GenericJobData(new DateTime(2022, 06, 21), 17),
+            };
+
+            ChartData2 = new List<GenericJobData>()
+            {
+                new GenericJobData(new DateTime(2022, 06, 14), 75),
+                new GenericJobData(new DateTime(2022, 06, 15, 23, 59, 59), 89), //Exemple with hours
+                new GenericJobData(new DateTime(2022, 06, 16), 59),
+                new GenericJobData(new DateTime(2022, 06, 17, 12, 00, 00), 46), //Exemple with hours
                 new GenericJobData(new DateTime(2022, 06, 20), 67),
                 new GenericJobData(new DateTime(2022, 06, 21), 17),
             };

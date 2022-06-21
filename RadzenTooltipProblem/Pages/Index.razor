@@ -22,3 +22,19 @@ Welcome to your new app.
         <RadzenLegend Visible="false" />
     </RadzenChart>
 </div>
+
+
+<div class="w-50">
+    <RadzenChart>
+        <RadzenLineSeries Title="Example" Smooth="true" Data="@ChartData2" CategoryProperty="@nameof(GenericJobData.Date)" ValueProperty="@nameof(GenericJobData.Value)" LineType="LineType.Solid">
+            <RadzenMarkers MarkerType="MarkerType.Circle" />
+        </RadzenLineSeries>
+        <RadzenCategoryAxis Padding="10" FormatString="{0:dd/MM/yy}">
+            <RadzenGridLines Visible="true" />
+        </RadzenCategoryAxis>
+        <RadzenValueAxis>
+            <RadzenGridLines Visible="true" />
+        </RadzenValueAxis>
+        <RadzenLegend Visible="false" />
+    </RadzenChart>
+</div>
